@@ -27,13 +27,11 @@ type Fn = () => void;
 //use the template function type above for our function below
 type AddEvenMore = (x: Params) => number;
 
-const addEvenMore: AddEvenMore = (x) => {
-  return x.a + x.b;
-};
+const addEvenMore: AddEvenMore = (x): number => x.a + x.b;
 console.log("add even more", addEvenMore({ a: 50, b: 4 }));
 
 //below without function type
-const addMore = (x: Params) => {
+const addMore = (x: Params): number => {
   const { a, b } = x;
   return a + b;
 };
