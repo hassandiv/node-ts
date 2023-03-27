@@ -22,12 +22,14 @@ interface Params {
 
 //template function type that return void nothing
 //can be used with any function just change the func name and return type from void to string or number or object ...etc
-type Fn = () => void;
+type Fn = (param: any) => void;
 
-//use the template function type above for our function below
+//re-use the template function defined type above for our function below
+//type arrow function is defined, x object param defined Params interface, return a number is also defined
 type AddEvenMore = (x: Params) => number;
 
-const addEvenMore: AddEvenMore = (x): number => x.a + x.b;
+//just add "AddEvenMore" in our function below to add its type definitions
+const addEvenMore: AddEvenMore = (x) => x.a + x.b;
 console.log("add even more", addEvenMore({ a: 50, b: 4 }));
 
 //below without function type
