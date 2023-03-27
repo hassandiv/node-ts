@@ -77,3 +77,6 @@ console.log("hello hassan from ts", add(1, 10));
 app.listen(1000, () => {
   console.log("server started on 1000");
 });
+
+//in package.json
+//either use ts-node-dev to keep the server running all the time without restarting or nodemon
