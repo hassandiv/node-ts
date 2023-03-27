@@ -29,9 +29,7 @@ type Fn = (param: any) => void;
 type AddEvenMore = (x: Params) => number;
 
 //just add "AddEvenMore" in our function below to add its type definitions
-const addEvenMore: AddEvenMore = (x) => {
-  return x.a + x.b;
-};
+const addEvenMore: AddEvenMore = (x) => x.a + x.b;
 console.log("add even more", addEvenMore({ a: 50, b: 4 }));
 
 //below without function type
